@@ -1,0 +1,150 @@
+/* Nils */
+
+/* Vorschaukachel mit abgerundetem Bild */
+.elm-card {
+  position: relative;
+  border: 1px solid red;
+  margin-top: 100px;
+  margin-right: 20px;
+}
+
+.elm-card-img {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  top: -70px;
+  left: 40px;
+  border-radius: 8px;
+}
+
+.elm-card-title {
+  width: 180px;
+  height: 90px;
+  background-color: var(--white);
+  padding: 70px 15px 0px;
+}
+
+.elm-card-text {
+  width: 200px;
+  height: 100px;
+  background-color: var(--light-blue-grey);
+  padding: 8px 15px 8px;
+}
+
+.elm-card-grid-3 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+  
+  
+/* Martin */
+
+/* Blickpunkt-Vorschau auf Startseite */
+.news-card {
+  position: relative;
+  width: 288px;
+  margin-top: 13px;
+  margin-right: 13px;
+}
+
+h2.news-card {
+}
+  
+.news-card-img {
+  width: 288px;
+  height: 288px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+ /* Dreieck */
+.news-card-title:before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: 0px; 
+  left: 0px;
+  z-index: -1;
+  border-top: 144px solid transparent;
+  border-bottom: 144px solid var(--white);
+  border-left: 144px solid var(--white);
+  border-right: 144px solid transparent;
+  opacity: 0.86;
+}
+
+/* Warum geht das nicht mit Bezug zum Bild?
+.news-card-img:after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: 0px; 
+  left: 0px;
+  border-top: 144px solid transparent;
+  border-bottom: 144px solid var(--white);
+  border-left: 144px solid var(--white);
+  border-right: 144px solid transparent;
+  opacity: 0.86;
+  z-index: 1;
+  }
+*/
+
+.news-card-title {
+  position: absolute;
+  width: 203px;
+  height: 63px;
+  padding: 208px 68px 17px 17px;
+  font-size: 14pt;
+  z-index: 1;
+}
+
+.news-card-title:hover:before{ /* Dreieck */
+  border-bottom: 144px solid var(--greyblue-82);
+  border-left: 144px solid var(--greyblue-82);
+}
+.news-card-title:hover{ 
+  color: var(--white);
+}
+
+.news-card-text { /* Text 144 234 Padding 19 13 10 17 */
+  position: absolute;
+  top: 288px; /*288px+28px*/
+  width: 234px; /*234 = 264-13-17*/
+  height: 144px; /*173-19-10*/
+  border-top: 28px solid var(--white);
+  border-bottom: 63px solid var(--white);
+  border-right: 24px solid var(--white);
+  background-color: var(--light-blue-grey);
+  padding: 19px 13px 10px 17px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.44px;
+  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.news-card:after{
+  position: absolute;
+  content: "Weiterlesen";
+  width: 91px;
+  height: 24px;
+  font-size: 16px;
+  font-style: italic;	
+  line-height: 1.5;
+  letter-spacing: -0.44px;
+  top: 510px;
+  left: 100px;
+  z-index: 2;
+  border-bottom: 3px solid var(--accent);
+  overflow: visible;
+}
+
+.card-grid-3 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
