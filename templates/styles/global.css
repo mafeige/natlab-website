@@ -93,6 +93,11 @@ ul li:before {
   margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 
+a { /* MF 23.11.2019: für News-Vorschau auf Startseite eingeführt */
+  color: #252525;
+  text-decoration: none;
+}
+
 .main-container {
   max-width: 1000px;
   display: block;
@@ -152,7 +157,7 @@ ul.main-nav li a:hover {
 }
 
 .main-slide-content {
-  width: 250px;
+  width: 750px;
   padding: 25px;
   background-color: rgba(246, 246, 246, 0.95);;
   position: absolute;
@@ -188,40 +193,6 @@ ul.main-nav li a:hover {
 .sidebar p {
   position: relative;
   z-index: 1;
-}
-
-.elm-card {
-  position: relative;
-  margin-top: 100px;
-  margin-right: 20px;
-}
-
-.elm-card-img {
-  width: 140px;
-  height: 140px;
-  position: absolute;
-  top: -70px;
-  left: 40px;
-  border-radius: 8px;
-}
-
-.elm-card-title {
-  width: 180px;
-  height: 90px;
-  background-color: var(--white);
-  padding: 70px 15px 0px;
-}
-
-.elm-card-text {
-  width: 200px;
-  height: 100px;
-  background-color: var(--light-blue-grey);
-  padding: 8px 15px 8px;
-}
-
-.elm-card-grid-3 {
-  display: grid;
-  grid-template-columns: auto auto auto;
 }
 
 .footer-top {
